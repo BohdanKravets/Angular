@@ -6,7 +6,10 @@ import {HttpClient} from "@angular/common/http";
 })
 export class UserService {
 
-  constructor(httpClient:HttpClient) {
-    httpClient.get('https://jsonplaceholder.typicode.com/users')
+  constructor(private httpClient:HttpClient) {
+  }
+
+  getUsers()<User[]>{
+
   }
 }
