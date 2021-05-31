@@ -5,6 +5,8 @@
 export const environment = {
   production: false
 };
+export const URL = 'https://jsonplaceholder.typicode.com/'
+
 
 /*
  * For easier debugging in development mode, you can import the following file
