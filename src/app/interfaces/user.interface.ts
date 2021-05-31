@@ -1,3 +1,4 @@
 export interface User {
-  this``
+  id: string;
+  name:string;
 }
