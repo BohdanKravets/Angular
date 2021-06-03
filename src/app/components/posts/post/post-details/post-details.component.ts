@@ -13,7 +13,7 @@ export class PostDetailsComponent implements OnInit {
 
   constructor(private router:Router,private activatedRoute:ActivatedRoute) {
     this.activatedRoute.params.subscribe(params => {
-      this.postInfo =  this.router.getCurrentNavigation()?.extras.state as IPost
+      this.postInfo =  this.router.getCurrentNavigation()?.extras.state as IPost;
     })
 
   }

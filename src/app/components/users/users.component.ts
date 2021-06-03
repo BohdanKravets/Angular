@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) {
     this.activatedRoute.data.subscribe(value => {
-      this.users = value.users
+      this.users = value.users;
     })
 
   }

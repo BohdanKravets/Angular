@@ -18,6 +18,6 @@ export class PostComponent implements OnInit {
   }
 
   goToDetails() {
-    this.router.navigate([this.post.id],{relativeTo:this.activatedRoute,state:this.post})
+    this.router.navigate([this.post.id],{relativeTo:this.activatedRoute,state:this.post});
   }
 }

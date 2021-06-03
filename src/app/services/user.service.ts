@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IPost, IUser} from "../interfaces";
@@ -9,9 +9,10 @@ import {urls} from "../constants";
 })
 export class UserService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+  }
 
-  getAll():Observable<IUser[]>{
-    return this.httpClient.get<IUser[]>(urls.users)
+  getAll(): Observable<IUser[]> {
+    return this.httpClient.get<IUser[]>(urls.users);
   }
 }

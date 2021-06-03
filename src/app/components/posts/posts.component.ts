@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
 
   posts:IPost[];
   constructor(private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.data.subscribe(value => this.posts = value.posts)
+    this.activatedRoute.data.subscribe(value => this.posts = value.posts);
   }
 
   ngOnInit(): void {

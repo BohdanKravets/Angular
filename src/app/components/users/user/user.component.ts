@@ -19,6 +19,6 @@ export class UserComponent implements OnInit {
   }
 
   goToDetails() {
-    this.router.navigate([this.user.id], {relativeTo: this.activatedRoute, state: this.user})
+    this.router.navigate([this.user.id], {relativeTo: this.activatedRoute, state: this.user});
   }
 }
