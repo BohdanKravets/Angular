@@ -1,0 +1,11 @@
+.posts-content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.posts, .post-details {
+  width: 50%;
+}
+
+

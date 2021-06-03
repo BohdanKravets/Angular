@@ -1,0 +1,9 @@
+.users-content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.users, .user-details {
+  width: 50%;
+}
