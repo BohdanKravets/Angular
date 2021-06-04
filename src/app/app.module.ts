@@ -4,6 +4,7 @@ import {AppComponent} from './components/app/app.component';
 import {HomeComponent} from './components/home/home.component';
 import {RouterModule, Routes} from "@angular/router";
 
+// створити модулі для users, posts, comments
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
