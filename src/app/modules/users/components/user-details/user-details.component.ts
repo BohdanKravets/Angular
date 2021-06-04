@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {IPost} from "../../../../interfaces/post";
-import {IUser} from "../../../../interfaces/user";
+import {IUser} from "../../interfaces";
 
 @Component({
   selector: 'app-user-details',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {PostsService} from "../../services/posts.service";
-import {IPost} from "../../../../interfaces/post";
+import {PostsService} from "../../services";
+import {IPost} from "../../interfaces";
 
 @Component({
   selector: 'app-posts',
@@ -13,8 +13,7 @@ posts:IPost[];
 
   ngOnInit(): void {
     this.postsService.getAll().subscribe(value => {
-      console.log(value)
-      this.posts = value
+      this.posts = value;
     });
   }
 
