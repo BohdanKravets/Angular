@@ -1,0 +1,9 @@
+.content{
+  display: flex;
+}
+.posts{
+  width: 50%;
+}
+.comments{
+  width: 50%;
+}

@@ -1,2 +1,8 @@
-<app-user *ngFor="let user of users" [user] ="user"></app-user>
-<router-outlet></router-outlet>
+<div [className]="'content'">
+  <div [className]="'users'">
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+  <div [className]="'posts'">
+    <router-outlet></router-outlet>
+  </div>
+</div>

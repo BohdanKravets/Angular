@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {PostsService} from "../../services/posts.service";
+import {PostsService} from "../../../../services/posts.service";
 import {IPost} from "../../../../interfaces/post.interface";
-import {IComment} from "../../../../interfaces/comments.interface";
-import {CommentsService} from "../../services/comments.service";
+import {IComment} from "../../../../interfaces/comment.interface";
+import {CommentsService} from "../../../../services/comments.service";
 
 @Component({
   selector: 'app-posts',
