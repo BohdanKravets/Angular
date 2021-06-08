@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IPost} from "../../../../../interfaces";
-import {CommentsService} from "../../../../../services";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -18,7 +17,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToComments() {
+  goToComments(): void {
     this.router.navigate([this.post.id], {relativeTo: this.activatedRoute});
   }
 }
