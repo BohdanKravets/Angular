@@ -1,32 +1,32 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { UserRoutingModule } from './user-routing.module';
-import { UsersComponent } from './components/users/users.component';
-import { PostsComponent } from './components/posts/posts.component';
-import {PostsService} from "../../services/posts.service";
-import {UsersService} from "../../services/users.service";
+import {UserRoutingModule} from './user-routing.module';
+import {UsersComponent} from './components/users/users.component';
+import {UserPostsComponent} from './components/user-posts/user-posts.component';
+import {PostsService, UsersResolverService} from "../../services";
 import {HttpClientModule} from "@angular/common/http";
-import { UserComponent } from './components/users/user/user.component';
-import { PostComponent } from './components/posts/post/post.component';
+import {UserComponent} from './components/users/user/user.component';
+import {UserPostComponent} from './components/user-posts/user-post/user-post.component';
 
 
 @NgModule({
   declarations: [
     UsersComponent,
-    PostsComponent,
+    UserPostsComponent,
     UserComponent,
-    PostComponent
+    UserPostComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     HttpClientModule
   ],
-  providers:[
+  providers: [
     PostsService,
-    UsersService
+    UsersResolverService
   ]
 
 })
-export class UserModule { }
+export class UserModule {
+}

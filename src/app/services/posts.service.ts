@@ -1,20 +1,26 @@
-import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {urls} from "../constants/urls";
 import {Observable} from "rxjs";
-import {IPost} from "../interfaces/post.interface";
+import {IPost} from "../interfaces";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
 
-  constructor(private httpClient:HttpClient) { }
-
-  getPosts():Observable<IPost[]> {
-    return this.httpClient.get<IPost[]>(urls.posts)
+  constructor(private httpClient: HttpClient) {
   }
-  getByUserId(userId:number):Observable<IPost[]>{
-    return this.httpClient.get<IPost[]>(`${urls.users}/${userId}/posts`)
+
+  getAll(): Observable<IPost[]> {
+    return this.httpClient.get<IPost[]>(urls.posts);
+  }
+
+  getByUserId(userId: number): Observable<IPost[]> {
+    return this.httpClient.get<IPost[]>(urls.posts, {
+      params: new HttpParams({
+        fromObject: {userId}
+      })
+    });
   }
 }

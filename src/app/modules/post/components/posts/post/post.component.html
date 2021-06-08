@@ -1,4 +1,4 @@
 <div>
   {{post.id}}. {{post.title}}
-  <a [routerLink]="[post.id]">comments</a>
+  <button (click)="goToComments()">comments</button>
 </div>

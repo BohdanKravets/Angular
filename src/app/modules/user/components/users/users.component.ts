@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {UsersService} from "../../../../services/users.service";
-import {IUser} from "../../../../interfaces/user.interface";
+import {Component, OnInit} from '@angular/core';
+import {IUser} from "../../../../interfaces";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-users',
@@ -8,11 +8,13 @@ import {IUser} from "../../../../interfaces/user.interface";
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-users:IUser[]
-  constructor(private usersService:UsersService) { }
+  users: IUser[]
+
+  constructor( private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.data.subscribe(({users}) => this.users = users);
+  }
 
   ngOnInit(): void {
-    this.usersService.getAll().subscribe(value => this.users=value)
   }
 
 }

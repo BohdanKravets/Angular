@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PostsComponent} from "./components/posts/posts.component";
-import {CommentsComponent} from "./components/comments/comments.component";
+import {PostCommentsComponent} from "./components/post-comments/post-comments.component";
+import {PostsResolverService} from "../../services";
 
 const routes: Routes = [{
-  path: '', component: PostsComponent, children: [{
-    path: ':id', component: CommentsComponent
+  path: '', component: PostsComponent,resolve:{posts:PostsResolverService} ,children: [{
+    path: ':id', component: PostCommentsComponent
   }]
 }];
 
