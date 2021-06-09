@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IUser} from "../../interfaces";
-import {DataTransferService} from "../../services/data-transfer.service";
+import {DataTransferService} from "../../services";
 
 @Component({
   selector: 'app-user-details',
