@@ -7,6 +7,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
+// створити select з юзерами(jsonplaceholder), при кліку на кнопку показати інформацію про юзера
 @NgModule({
   declarations: [
     AppComponent,
