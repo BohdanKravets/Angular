@@ -1,0 +1,11 @@
+
+  <form *ngIf="!token" [formGroup]="loginForm" (ngSubmit)="login()">
+    <label>Email</label>
+    <input type="text" [formControl]="emailControl">
+
+    <label>Password</label>
+    <input type="text" [formControl]="passwordControl">
+    <button >Login</button>
+  </form>
+  <p *ngIf="token">You are already logged</p>
+

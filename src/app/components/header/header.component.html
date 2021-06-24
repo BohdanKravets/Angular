@@ -1,0 +1,9 @@
+<div [className]="'header'">
+  <div [className]="'nav'">
+    <a [routerLink]="['/']">cars</a>
+    <a [routerLink]="['addCar']">add car</a></div>
+  <div [className]="'log'">
+    <button *ngIf="!token" [routerLink]="['login']" >login</button>
+    <app-logout *ngIf="token"></app-logout>
+  </div>
+</div>

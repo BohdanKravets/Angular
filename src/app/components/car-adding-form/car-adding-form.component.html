@@ -1,0 +1,12 @@
+<form [formGroup]="addCarForm" (ngSubmit)="addCar()">
+  <label >Model:</label>
+  <input [formControl]="modelControl" type="text" >
+
+  <label >Price:</label>
+  <input [formControl]="priceControl" type="number">
+
+  <label >Year:</label>
+  <input [formControl]="yearControl" type="number">
+
+  <button>add car</button>
+</form>
